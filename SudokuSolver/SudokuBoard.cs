@@ -34,6 +34,18 @@ namespace SudokuSolver {
       return fixedNumbers[i, j];
     }
 
+    public override string ToString(){
+      StringBuilder sb = new();
+      for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+          sb.Append(board[i, j] + " ");
+        }
+      }
+      sb.AppendLine();
+      return sb;
+    }
+
+
     public BoardStatus Check() {
       BoardStatus status = BoardStatus.Solved;
 
